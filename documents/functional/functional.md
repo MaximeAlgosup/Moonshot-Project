@@ -18,7 +18,7 @@
       - [VirtualBox](#virtualbox)
   - [Personas and use cases](#personas-and-use-cases)
     - [Target audience](#target-audience)
-    - [1. retro-gaming fan - Tony](#1-retro-gaming-fan---tony)
+    - [1. retrogaming fan - Tony](#1-retrogaming-fan---tony)
     - [2. Looking to recycle his old computer - Bruce](#2-looking-to-recycle-his-old-computer---bruce)
     - [3. DIY enthusiast - Clint](#3-diy-enthusiast---clint)
   - [Functional requirements](#functional-requirements)
@@ -27,6 +27,11 @@
     - [User interface](#user-interface)
     - [Installation](#installation)
     - [Update System](#update-system)
+  - [Budget](#budget)
+    - [Computer](#computer)
+    - [Screen](#screen)
+    - [Keyboard](#keyboard)
+    - [Joystick and buttons](#joystick-and-buttons)
   - [Period planning](#period-planning)
   - [Success Criteria](#success-criteria)
     - [Hardware](#hardware)
@@ -50,7 +55,7 @@ As a student at ALGOSUP, I have the privilege and responsibility of designing an
 
 ## Project scope
 
-The main aim of this project is to demonstrate that by developing a sufficiently light kernel, adapted to computers equipped with Intel processors dating from the early 2000s, it is possible to give a new lease of life to these technologically outdated devices. The vision is to turn them into arcade machines, offering an innovative alternative to obsolescence.
+The main aim of this project is to demonstrate that by developing a sufficiently light kernel, adapted to computers equipped with Intel processors dating from the early 2000s, it is possible to give a new lease of life to these technologically outdated devices. The vision is to turn them into arcade cabinets, offering an innovative alternative to obsolescence.
 
 This kernel acts as an interface for launching retro games coded in C language. Users can create their own games, adding a participatory dimension to the platform. In short, the kernel functions as a retro game launcher, offering a playful and creative experience for the user community.
 
@@ -68,16 +73,16 @@ VirtualBox, a virtualization software, plays an essential role. It enables us to
 
 ### Target audience
 
-This kernel is aimed at a diverse audience, from retro-gaming enthusiasts to DIY enthusiasts. The following personas represent our presumed target audience.
+This kernel is aimed at a diverse audience, from retrogaming enthusiasts to DIY enthusiasts. The following personas represent our presumed target audience.
 
-### 1. retro-gaming fan - Tony
+### 1. retrogaming fan - Tony
 
 - Objectives:
-  - Tony, a retro-gaming enthusiast, wants to play retro games on a dedicated computer without too much expense.
-  - He aspires to recapture the nostalgia of arcade machines by having access to several games in one place.
+  - Tony, a retrogaming enthusiast, wants to play retro games on a dedicated computer without too much expense.
+  - He aspires to recapture the nostalgia of arcade cabinets by having access to several games in one place.
 - Challenges:
-  - Create an affordable computer dedicated to retro-gaming, compatible with easily accessible hardware.
-  - Meet the exacting expectations of a retro-gaming enthusiast like Tony.
+  - Create an affordable computer dedicated to retrogaming, compatible with easily accessible hardware.
+  - Meet the exacting expectations of a retrogaming enthusiast like Tony.
   
 ### 2. Looking to recycle his old computer - Bruce
 
@@ -91,7 +96,7 @@ This kernel is aimed at a diverse audience, from retro-gaming enthusiasts to DIY
 ### 3. DIY enthusiast - Clint
 
 - Objectives:
-  - Clint is a DIY enthusiast with ambitions to build his own arcade machine.
+  - Clint is a DIY enthusiast with ambitions to build his own arcade cabinet.
   - With some computer knowledge, he wants to create and add his own retro games to the terminal.
 - Challenges:
   - Ensure kernel compatibility with arcade joysticks and buttons for an authentic experience.
@@ -109,12 +114,12 @@ This kernel is aimed at a diverse audience, from retro-gaming enthusiasts to DIY
 ### Control
 
 - Kernel control via keyboard.
-- Integration of kernel control with joystick and buttons, similar to an arcade machine.
+- Integration of kernel control with joystick and buttons, similar to an arcade cabinet.
 
 ### User interface
 
 - The kernel should have a simple, intuitive user interface.
-- The kernel's user interface should be visually reminiscent of an arcade machine.
+- The kernel's user interface should be visually reminiscent of an arcade cabinet.
 
 ### Installation
 
@@ -126,6 +131,35 @@ This kernel is aimed at a diverse audience, from retro-gaming enthusiasts to DIY
 
 - Kernel update possible via USB key.
 - Clear documentation and simplicity of the kernel update procedure.
+
+## Budget
+
+### Computer
+
+For the computer, the price has been defined as follows: A search for a "desktop computer" was carried out on the second-hand website [Leboncoin]([ww](https://www.leboncoin.fr/)). Then a maximum price limit was set at 50€. Then the first 10 computers with an Intel microprocessor were selected. The average price of these 10 computers corresponds to the reference price used to define the budget.
+
+So the average price of a computer used to define the budget is 30€.
+
+### Screen
+
+For the screen, the price has been defined as follows: A search for a "screen" was carried out on the second-hand website [Leboncoin]([ww](https://www.leboncoin.fr/)). Then a maximum price limit was set at 30€. Then the first 10 screens were selected. The average price of these 10 screens corresponds to the reference price used to define the budget.
+
+So the average price of a screen used to define the budget is 15€.
+
+### Keyboard
+
+For the keyboard, the price has been defined as follows: A search for a "keyboard" was carried out on the second-hand website [Leboncoin]([ww](https://www.leboncoin.fr/)). Then a maximum price limit was set at 20€. Then the first 10 keyboards were selected. The average price of these 10 keyboards corresponds to the reference price used to define the budget.
+
+So the average price of a keyboard used to define the budget is 4€.
+
+You can see more details in this [document](https://docs.google.com/spreadsheets/d/111yPxzFDjgGrgsK3DC9IpWPv7YG_TXEbQ3DORjWvqSk/edit?usp=sharing).
+
+### Joystick and buttons
+
+Unfortunately, it's very hard to find second-hand joysticks and buttons.
+So for our project we decided to follow the [recommendations](https://www.thegeekpub.com/278188/the-best-arcade-joystick-and-buttons) of "The geek pub arcade" site and use the following pack: [link](https://www.amazon.com/dp/B01M2X88QP/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B01M2X88QP&pd_rd_w=MTBGG&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=76KQXVS8VCWWTJ7G3NVE&pd_rd_wg=opBVU&pd_rd_r=f1a9e54a-1684-43e0-b3e4-a144986e3938&s=toys-and-games&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&smid=A3H7VB6FZ4M9FM&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzMEQxREFBNDVFUjJMJmVuY3J5cHRlZElkPUEwOTYzMDA4MzdVSks2RldWNk41TSZlbmNyeXB0ZWRBZElkPUEwNDU1MzU5T1BLVjU3RkNLNE1XJndpZGdldE5hbWU9c3BfZGV0YWlsX3RoZW1hdGljJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==).
+This pack contains 1 joystick and 10 buttons with the required features for 24.24€.
+
 
 ## Period planning
 
@@ -166,7 +200,7 @@ This section presents the planning of the main periods of the project, from the 
 ### Control and user interface
 
 - The kernel must offer a fluid control experience through the use of a keyboard.
-- An alternative is provided for control using a joystick and buttons, emulating the characteristic interaction of an arcade machine.
+- An alternative is provided for control using a joystick and buttons, emulating the characteristic interaction of an arcade cabinet.
 - The kernel's user interface must be both simple and intuitive, making it easy to navigate and use.
 - The kernel interface should look like this:
 
@@ -225,28 +259,28 @@ This section presents the planning of the main periods of the project, from the 
 
 ## Glossary
 
-| Term | Definition |
-| ---- | ---------- |
-| ALGOSUP | ALGOSUP is a computer school located in Vierzon, France. It offers 3 to 5 year courses in computer science. |
-| AMD  | AMD (Advanced Micro Devices) is an American company specializing in the manufacture of processors, graphics cards and other computer components. |
-| Arcade machine | An arcade machine is a public video game device, often equipped with a screen, buttons and a joystick, enabling players to play arcade games. |
-| Bug | A bug is a defect or error in a computer program that causes undesired behavior. |
-| C language | The C language is a high-level programming language that has been widely used in software development. It is known for its flexibility and proximity to machine language. |
-| DIY | Do It Yourself refers to the practice of creating, making or repairing something yourself, rather than buying ready-made products. |
-| Go | "Go" is the abbreviation for gigabyte, a unit of measurement for storage capacity or memory, equivalent to 1,024 megabytes. |
-| Graphics card | A graphics card is a computer component that manages the display of images on the screen. It is essential for graphics quality and game performance. |
-| HDD | A hard disk is a magnetic data storage device used in computers to store files, programs and the operating system. |
-| Intel | Intel is an American company specializing in the manufacture of processors and electronic components. It is best known for its processors, which are used in many computers. |
-| Joysticks | Joysticks are video game control devices that allow users to move a cursor or character on the screen by pushing it in different directions. |
-| Kernel | The kernel is the central part of an operating system. It manages hardware resources and memory, and facilitates interaction between hardware and software. |
-| Linux | Linux is an open source operating system based on the Linux kernel. It is widely used in the computing world, offering a free and flexible alternative to other operating systems. |
-| Mo | Mo is the abbreviation for megabyte, a unit of measurement of storage capacity or memory, equivalent to 1,024 kilobytes. |
-| Pentium 3 Katmai | The Pentium 3 Katmai is a specific version of the Pentium 3 processor manufactured by Intel, popular in the late 1990s. |
-| RAM | RAM (Random Access Memory) is a volatile memory used by a computer to temporarily store data and running programs. It allows rapid access to information by the processor. |
-| Retro-gaming | Retro-gaming refers to the practice of playing classic video games, often from older consoles, to relive gaming experiences of the past. |
-| USB flash drive | A USB flash drive is a small portable storage device that uses flash memory to store data. It is often used to transfer files between computers. |
-| VirtualBox | VirtualBox is an open-source virtualization software program that lets you create virtual machines on a host system, allowing multiple operating systems to run simultaneously. |
-| Virtualization | Virtualization is a technology that enables the creation of virtual versions of a computing environment, such as virtual machines, allowing multiple operating systems to run on a single physical machine. |
-| X86 architecture | X86 architecture The X86 architecture is a processor architecture developed by Intel. It is used in many personal computers. |
-| X86 assembly language | X86 assembly language is a low-level programming language specific to the x86 processor architecture. It is used to write programs that can be directly understood by the processor. |
+| Term | Definition | Source |
+| ---- | ---------- | ------ |
+| ALGOSUP | ALGOSUP is a computer school located in Vierzon, France. It offers 3 to 5 year courses in computer science. | [Link](https://www.algosup.com/) |
+| AMD  | AMD (Advanced Micro Devices) is an American company specializing in the manufacture of processors, graphics cards and other computer components. | [Link](https://en.wikipedia.org/wiki/AMD) |
+| Arcade cabinet | An arcade cabinet is a public video game device, often equipped with a screen, buttons and a joystick, enabling players to play arcade games. | [Link](https://en.wikipedia.org/wiki/Arcade_cabinet) |
+| Bug | A bug is a defect or error in a computer program that causes undesired behavior. | [Link](https://en.wikipedia.org/wiki/Software_bug) |
+| C language | The C language is a high-level programming language that has been widely used in software development. It is known for its flexibility and proximity to machine language. | [Link](https://en.wikipedia.org/wiki/C_(programming_language)) |
+| DIY | Do It Yourself refers to the practice of creating, making or repairing something yourself, rather than buying ready-made products. | [Link](https://en.wikipedia.org/wiki/Do_it_yourself) |
+| GB | "GB" is the abbreviation for gigabyte, a unit of measurement for storage capacity or memory, equivalent to 1,024 megabytes. | [Link](https://en.wikipedia.org/wiki/Gigabyte) |
+| Graphics card | A graphics card is a computer component that manages the display of images on the screen. It is essential for graphics quality and game performance. | [Link](https://en.wikipedia.org/wiki/Graphics_card) |
+| HDD | A hard disk is a magnetic data storage device used in computers to store files, programs and the operating system. | [Link](https://en.wikipedia.org/wiki/Hard_disk_drive) |
+| Intel | Intel is an American company specializing in the manufacture of processors and electronic components. It is best known for its processors, which are used in many computers. | [Link](https://en.wikipedia.org/wiki/Intel) |
+| Joysticks | Joysticks are video game control devices that allow users to move a cursor or character on the screen by pushing it in different directions. | [Link](https://en.wikipedia.org/wiki/Joystick) |
+| Kernel | The kernel is the central part of an operating system. It manages hardware resources and memory, and facilitates interaction between hardware and software. | [Link](https://en.wikipedia.org/wiki/Kernel_(operating_system)) |
+| Linux | Linux is an open source operating system based on the Linux kernel. It is widely used in the computing world, offering a free and flexible alternative to other operating systems. | [Link](https://en.wikipedia.org/wiki/Linux) |
+| MB | MB is the abbreviation for megabyte, a unit of measurement of storage capacity or memory, equivalent to 1,024 kilobytes. | [Link](https://en.wikipedia.org/wiki/Megabyte) |
+| Pentium 3 Katmai | The Pentium 3 Katmai is a specific version of the Pentium 3 processor manufactured by Intel, popular in the late 1990s. | [Link](https://en.wikipedia.org/wiki/Pentium_III) |
+| RAM | RAM (Random Access Memory) is a volatile memory used by a computer to temporarily store data and running programs. It allows rapid access to information by the processor. | [Link](https://en.wikipedia.org/wiki/Random-access_memory) |
+| Retrogaming | Retrogaming refers to the practice of playing classic video games, often from older consoles, to relive gaming experiences of the past. | [Link](https://en.wikipedia.org/wiki/Retrogaming) |
+| USB flash drive | A USB flash drive is a small portable storage device that uses flash memory to store data. It is often used to transfer files between computers. | [Link](https://en.wikipedia.org/wiki/USB_flash_drive) |
+| VirtualBox | VirtualBox is an open-source virtualization software program that lets you create virtual machines on a host system, allowing multiple operating systems to run simultaneously. | [Link](https://en.wikipedia.org/wiki/VirtualBox) |
+| Virtualization | Virtualization is a technology that enables the creation of virtual versions of a computing environment, such as virtual machines, allowing multiple operating systems to run on a single physical machine. | [Link](https://en.wikipedia.org/wiki/Virtualization) |
+| X86 architecture | X86 architecture The X86 architecture is a processor architecture developed by Intel. It is used in many personal computers. | [Link](https://en.wikipedia.org/wiki/X86) |
+| X86 assembly language | X86 assembly language is a low-level programming language specific to the x86 processor architecture. It is used to write programs that can be directly understood by the processor. | [Link](https://en.wikipedia.org/wiki/X86_assembly_language) |
 
