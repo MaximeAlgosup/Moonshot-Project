@@ -21,21 +21,19 @@
     - [Personas](#personas)
   - [Functional Requirements](#functional-requirements)
     - [Architecture](#architecture)
-    - [Control](#control)
+    - [User Experience](#user-experience)
     - [User Interface](#user-interface)
     - [Installation](#installation)
     - [Update System](#update-system)
   - [Budget](#budget)
-    - [Computer](#computer)
-    - [Screen](#screen)
-    - [Keyboard](#keyboard)
-    - [Joystick And Buttons](#joystick-and-buttons)
+    - [Budget Constraints](#budget-constraints)
+    - [Analysis of the French Second-Hand Market](#analysis-of-the-french-second-hand-market)
     - [Average Price For The Project](#average-price-for-the-project)
   - [Period Planning](#period-planning)
   - [Success Criteria](#success-criteria)
     - [Hardware](#hardware)
     - [Installation](#installation-1)
-    - [Control And User Interface](#control-and-user-interface)
+    - [User Experince And Interface](#user-experince-and-interface)
     - [Bugs](#bugs)
     - [Game Launcher](#game-launcher)
   - [Non-Functional Criteria](#non-functional-criteria)
@@ -104,7 +102,7 @@ The following personas are designed to best represent each target audience:
 1. **Looking To Recycle His Old Computer - Bruce**
    | Name | Description |
    | ---- | ----------- |
-   | <img src="prototype_pic/personas/man-with-recycling-garbage-can-upscaled.png" alt="Guy who recycling things" width=200 /> | Bruce is 47 years old, he is a father and is very involved in the ecological cause. <br> He recycles as best he can and likes to give a second life to his old devices. <br> Bruce doesn't know anything about computers. |
+   | <img src="prototype_pic/personas/man-with-recycling-garbage-can-upscaled.png" alt="Guy who recycling things" width="200" /> | Bruce is 47 years old, he is a father and is very involved in the ecological cause. <br> He recycles as best he can and likes to give a second life to his old devices. <br> Bruce doesn't know anything about computers. |
 
    | Behaviors | Needs |
    | --------- | ----- |
@@ -117,7 +115,7 @@ The following personas are designed to best represent each target audience:
 2. **DIY enthusiast - Clint**
    | Name | Description |
    | ---- | ----------- |
-   | <img src="prototype_pic/personas/guy-who-does-carpentry-upscaled2.png" alt="Guy whos does DIY" width=200/> | Clint is 25, works part-time and spends all his spare time repairing old objects or creating new ones.<br> He's quite comfortable with computers. |
+   | <img src="prototype_pic/personas/guy-who-does-carpentry-upscaled2.png" alt="Guy whos does DIY" width="200"/> | Clint is 25, works part-time and spends all his spare time repairing old objects or creating new ones.<br> He's quite comfortable with computers. |
 
    | Behaviors | Needs |
    | --------- | ----- |
@@ -131,7 +129,7 @@ The following personas are designed to best represent each target audience:
 3. **Retro-Gaming Fan - Tony**
    | Name | Description |
    | ---- | ----------- |
-   | <img src="prototype_pic/personas/guy-play-retro-games.png" alt="Guy playing retro video games" width=200 /> | Tony is a 19 year old student who loves retro games. Like many students, he doesn't have much money.<br>Tony knows a bit about computers, but he's not an expert. |
+   | <img src="prototype_pic/personas/guy-play-retro-games.png" alt="Guy playing retro video games" width="200" /> | Tony is a 19 year old student who loves retro games. Like many students, he doesn't have much money.<br>Tony knows a bit about computers, but he's not an expert. |
    
    | Behaviors | Needs |
     | --------- | ----- |
@@ -144,7 +142,7 @@ The following personas are designed to best represent each target audience:
 4. **Retro-Game developer - Steve**
    | Name | Description |
    | ---- | ----------- |
-   | <img src="prototype_pic/personas/guy-coding.png" alt="Guy coding games" width=200 /> | Steve is 35 years old and works as a network administrator in a company. <br> He lives simply and enjoys coding video games in his spare time.  | 
+   | <img src="prototype_pic/personas/guy-coding.png" alt="Guy coding games" width="200" /> | Steve is 35 years old and works as a network administrator in a company. <br> He lives simply and enjoys coding video games in his spare time.  | 
    
    | Behaviors | Needs |
    | --------- | ----- |
@@ -156,11 +154,6 @@ The following personas are designed to best represent each target audience:
       - Give visibility to project contributors like Steve.
       - Create an immersive, retro-gaming environment.
 
-
-
-
-
-
 ## Functional Requirements
 
 ### Architecture
@@ -168,17 +161,48 @@ The following personas are designed to best represent each target audience:
 - The kernel must be compatible with Intel processors.
 - No graphics card is required for kernel operation.
 - Compatibility with 32-bit Intel processors.
-- Kernel development in C language and X86 assembler.
+- Kernel development in C language and X86 assembly.
 
-### Control
+### User Experience
+**Devices:**
+| Device | Description | Connection |
+| ------ | ----------- | ---------- |
+| Keyboard | The user must be able to interact with the kernel using a keyboard for basic interactions. It interacts with the keyboard arrows as well as the “enter” key. | USB, PS/2 |
+| Joystick and buttons | The user must be able to interact with the core using a joystick with 4 degrees of freedom, as well as 6 buttons similar to those of an arcade cabinet in order to guarantee optimal immersion.| USB |
 
-- Kernel control via keyboard.
-- Integration of kernel control with joystick and buttons, similar to an arcade cabinet.
+**Using the main interface:**  
+
+When the user starts the kernel for classic use, he arrives at the main interface, it is from this interface that we access the different games but also the game parameters and the kernel parameters.
+Using this interface is intended to be simple and intuitive.  
+Below is a diagram of the interface:
+
+| Schema | Description |
+| ------ | ----------- |
+| <img src="prototype_pic/UX/moonshot_UX.svg" alt="Draft of the main interface" width="400" /> | 1. Picture of the game <br> 2. Game name <br> 3. Game description <br> 4. Button to launch the game <br> 5. Button to access the game settings <br> 6. Buttons to shift and even play on the left <br> 7. Buttons to shift and even play on the right <br> 8. Button to access the kernel settings |
+
+The movement of the games when the user clicks on one of the right or left arrows can be schematized as follows:
+| Schema | Description |
+| ------ | ----------- |
+| <img src="prototype_pic/UX/moonshot_UX2.svg" alt="Draft of the main interface game movements" width="400" /> | When the user clicks on the red arrow (5 in the previous diagram),<br> the position of the games shifts by 1 to the right so game 1 is displayed.<br> In the same way, if the user clicks on the green arrow (6 in the previous diagram),<br> the position of the games shifts by 1 to the left so game 8 is displayed. |
+
+Navigating from one game to another is done either using the keyboard arrows or the "enter" key or with the joystick and buttons.  
+The different user inputs and the resulting actions are detailed in the following table:
+
+| Input | Action |
+| ----- | ------ |
+| Keyboard arrows left or right | Move the selection from one game to another. |
+| Keyboard arrrow up or down | Change the selection between the following actions: access game settings, start the game or access kernel settings. |
+| Keyboard enter | Validate the selection. |
+| Joystick left or right | Move the selection from one game to another. |
+| Joystick up or down | Change the selection between the following actions: access game settings, start the game or access kernel settings. |
+| Button 1 to 6 | Validate the selection. |
 
 ### User Interface
+The design of the main interface is initially simple and refined because it is not one of the major issues.
+The main interface is designed to be simple and intuitive, it is not intended to be a work of art but rather a functional interface.  
+The kernel interface should look like this:
 
-- The kernel should have a simple, intuitive user interface.
-- The kernel's user interface should be visually reminiscent of an arcade cabinet.
+<img src="./prototype_pic/GUI/main_UI.png" alt="Draft of the main interface" width="500" />
 
 ### Installation
 
@@ -193,31 +217,30 @@ The following personas are designed to best represent each target audience:
 
 ## Budget
 
-### Computer
+### Budget Constraints
+The interest of this project is that it makes it possible to recycle old computers and give them a new life but in order to function it must meet a certain budgetary constraint. So the budget limit set for materials is €100.  
+With this amount it should be possible to carry out the project and have a functional system.
 
-The budget for the computer was determined through the following steps: An investigation for a "desktop computer" was conducted on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price set at 50€. The first 10 computers featuring an Intel microprocessor were then selected. The average price of these 10 computers became the reference price used to establish the budget.
+### Analysis of the French Second-Hand Market
 
-As a result, the average price of a computer used to calculate the budget is 30 euros. Note that the price has been rounded off, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off. 
-### Screen
+- **Computer** budget was determined through the following steps: An investigation for a "desktop computer" was conducted on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price set at 50€. The first 10 computers featuring an Intel microprocessor were then selected. The average price of these 10 computers became the reference price used to establish the budget.
 
-To establish the budget for the screen, a similar approach was taken: A search for a "screen" was performed on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price limit set at 30€. The first 10 screens identified were then selected, and the average price of these screens became the reference price used in budget determination.
+  As a result, the average price of a computer used to calculate the budget is 30 euros. Note that the price has been rounded off, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off. 
 
-As a result, the average price of a screen used to define the budget is 15€. Note that the price has been rounded, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off.
+- **Screen** budget is calculated using a similar approach was taken: A search for a "screen" was performed on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price limit set at 30€. The first 10 screens identified were then selected, and the average price of these screens became the reference price used in budget determination.
 
-### Keyboard
+  As a result, the average price of a screen used to define the budget is 15€. Note that the price has been rounded, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off.
 
-The budget for the keyboard was set as follows: A search for a "keyboard" was executed on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price limit set at 20€. The first 10 keyboards meeting the criteria were selected, and the average price of these keyboards became the reference price used to define the budget.
+- **Keyboard** budget was set as follows: A search for a "keyboard" was executed on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price limit set at 20€. The first 10 keyboards meeting the criteria were selected, and the average price of these keyboards became the reference price used to define the budget.
 
-Hence, the average price of a keyboard used in budget calculation is 4€. Note that the price has been rounded, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off.
+  Hence, the average price of a keyboard used in budget calculation is 4€. Note that the price has been rounded, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off.
 
 For more details, please refer to this [document](https://docs.google.com/spreadsheets/d/111yPxzFDjgGrgsK3DC9IpWPv7YG_TXEbQ3DORjWvqSk/edit?usp=sharing).
 
-### Joystick And Buttons
-
-Securing second-hand joysticks and buttons proved challenging. Therefore, following the [recommendations](https://www.thegeekpub.com/278188/the-best-arcade-joystick-and-buttons) of "The geek pub arcade" site, we opted for a specific pack available at this [link](https://www.amazon.com/dp/B01M2X88QP/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B01M2X88QP&pd_rd_w=MTBGG&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=76KQXVS8VCWWTJ7G3NVE&pd_rd_wg=opBVU&pd_rd_r=f1a9e54a-1684-43e0-b3e4-a144986e3938&s=toys-and-games&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&smid=A3H7VB6FZ4M9FM&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzMEQxREFBNDVFUjJMJmVuY3J5cHRlZElkPUEwOTYzMDA4MzdVSks2RldWNk41TSZlbmNyeXB0ZWRBZElkPUEwNDU1MzU5T1BLVjU3RkNLNE1XJndpZGdldE5hbWU9c3BfZGV0YWlsX3RoZW1hdGljJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==).
+- **Joystick and buttons**: the second-hand market for these items has proven to be a real challenge. Therefore, following the  [recommendations](https://www.thegeekpub.com/278188/the-best-arcade-joystick-and-buttons) of "The geek pub arcade" site, we opted for a specific pack available at this [link](https://www.amazon.com/dp/B01M2X88QP/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B01M2X88QP&pd_rd_w=MTBGG&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=76KQXVS8VCWWTJ7G3NVE&pd_rd_wg=opBVU&pd_rd_r=f1a9e54a-1684-43e0-b3e4-a144986e3938&s=toys-and-games&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&smid=A3H7VB6FZ4M9FM&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzMEQxREFBNDVFUjJMJmVuY3J5cHRlZElkPUEwOTYzMDA4MzdVSks2RldWNk41TSZlbmNyeXB0ZWRBZElkPUEwNDU1MzU5T1BLVjU3RkNLNE1XJndpZGdldE5hbWU9c3BfZGV0YWlsX3RoZW1hdGljJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==).
 
 
-This pack, priced at 24.24€, includes 1 joystick and 10 buttons with the required features for our project.
+  This pack, priced at 24.24€, includes 1 joystick and 10 buttons with the required features for our project.
 
 
 ### Average Price For The Project
@@ -225,7 +248,7 @@ As defined, the kernel and its games must be compatible with both joysticks and 
 - 49€ for a computer, screen and keyboard.
 - 69.24€ for a computer, screen, joystick and 10 buttons.
   
-As expected, both prices are low enough to make the project accessible to a large number of people.
+Both prices are low enough to make the project accessible to a large number of people and correspond to the budget limit set.
 
 
 ## Period Planning
@@ -264,14 +287,11 @@ This section presents the planning of the main periods of the project, from the 
 - It must be possible to install the kernel from a USB key.
 - The installation process should be straightforward, require a measured execution time, and be accompanied by full documentation.
 
-### Control And User Interface
+### User Experince And Interface
 
 - The kernel must offer a fluid control experience through the use of a keyboard.
 - An alternative is provided for control using a joystick and buttons, emulating the characteristic interaction of an arcade cabinet.
 - The kernel's user interface must be both simple and intuitive, making it easy to navigate and use.
-- The kernel interface should look like this:
-
-![User interface picture example](./prototype_pic/GUI/main_UI.png)
 
 ### Bugs
 
