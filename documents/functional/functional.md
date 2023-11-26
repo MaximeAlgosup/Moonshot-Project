@@ -250,7 +250,6 @@ As defined, the kernel and its games must be compatible with both joysticks and 
   
 Both prices are low enough to make the project accessible to a large number of people and correspond to the budget limit set.
 
-
 ## Period Planning
 
 This section presents the planning of the main periods of the project, from the research phase to the final presentation of the project.
@@ -320,7 +319,6 @@ This section presents the planning of the main periods of the project, from the 
 - Installing the kernel on a computer equipped with an AMD processor is not an option for this project. The kernel, developed in X86 assembler, cannot be adapted for compatibility with AMD processors due to time constraints.
 - Internet connectivity is not integrated into the kernel. This decision is motivated by security concerns, aimed at minimizing potential risks associated with online system vulnerability.
 
- 
 ## Security
 
 ### Personal Data
@@ -333,7 +331,6 @@ This section presents the planning of the main periods of the project, from the 
 - The kernel can only be updated from an official source, previously communicated to users. This guarantees the integrity and security of updates.
 - No kernel updates can be performed remotely, minimizing the potential risks associated with remote intrusions. Users will be notified transparently, and official announcements will be available at the designated update location.
 
-
 ## Risks And Assumptions
 
 | Risk | Impact | Probability | Preventive Measures | Action Plan |
@@ -342,7 +339,6 @@ This section presents the planning of the main periods of the project, from the 
 | Technical issues | Bugs, unexpected restarts, display faults | Medium | Preliminary tests before full phase. The kernel must go through several test phases to prove itself and avoid as many bugs as possible. | The kernel must go through several test phases to be tested and avoid as many bugs. |
 | Game issues | Variable quality of games created by users | Medium | Exhaustive documentation to create quality games. Transparent communication with the community. Documentation must enable users to create quality games. | The documentation must enable users to create quality games. |
 | Problems with game creation | Complexity of game creation | Low | Simple, documented game creation system. Active user support. | The game creation system must be simple, documented and actively supported. |
-
 
 ## Glossary
 
