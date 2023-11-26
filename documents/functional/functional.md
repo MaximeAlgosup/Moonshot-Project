@@ -1,50 +1,49 @@
-# Functional specification | Maxime CARON
+# Moonshot Functional Specification | Maxime CARON
 |               |                           |
 | ------------- | ------------------------- |
 | Document name | Functional specifications |
 | Document owner | Maxime CARON |
 | Creation date | October 30, 2023 |
-| Last update | November 14, 2023 |
+| Last update | November 26, 2023 |
 
 
 <details>
-<summary>Table of content</summary>
+<summary>Table of Content</summary>
 
-- [Functional specification | Maxime CARON](#functional-specification--maxime-caron)
+- [Moonshot Functional Specification | Maxime CARON](#moonshot-functional-specification--maxime-caron)
   - [Context](#context)
-  - [Project scope](#project-scope)
+  - [Project Scope](#project-scope)
+    - [Overview](#overview)
+    - [Retro-Gaming and Computer Recycling Nowadays](#retro-gaming-and-computer-recycling-nowadays)
     - [Resources](#resources)
-      - [Linux kernel](#linux-kernel)
-      - [VirtualBox](#virtualbox)
-  - [Personas and use cases](#personas-and-use-cases)
-    - [Target audience](#target-audience)
-    - [1. retrogaming fan - Tony](#1-retrogaming-fan---tony)
-    - [2. Looking to recycle his old computer - Bruce](#2-looking-to-recycle-his-old-computer---bruce)
-    - [3. DIY enthusiast - Clint](#3-diy-enthusiast---clint)
-  - [Functional requirements](#functional-requirements)
+  - [Audience](#audience)
+    - [Targeted Audience](#targeted-audience)
+    - [Personas](#personas)
+  - [Functional Requirements](#functional-requirements)
     - [Architecture](#architecture)
     - [Control](#control)
-    - [User interface](#user-interface)
+    - [User Interface](#user-interface)
     - [Installation](#installation)
     - [Update System](#update-system)
   - [Budget](#budget)
     - [Computer](#computer)
     - [Screen](#screen)
     - [Keyboard](#keyboard)
-    - [Joystick and buttons](#joystick-and-buttons)
-  - [Period planning](#period-planning)
+    - [Joystick And Buttons](#joystick-and-buttons)
+    - [Average Price For The Project](#average-price-for-the-project)
+  - [Period Planning](#period-planning)
   - [Success Criteria](#success-criteria)
     - [Hardware](#hardware)
     - [Installation](#installation-1)
-    - [Control and user interface](#control-and-user-interface)
+    - [Control And User Interface](#control-and-user-interface)
     - [Bugs](#bugs)
     - [Game Launcher](#game-launcher)
-  - [Non-functional criteria](#non-functional-criteria)
-  - [Out of scope](#out-of-scope)
+  - [Non-Functional Criteria](#non-functional-criteria)
+  - [Out Of Scope](#out-of-scope)
   - [Security](#security)
     - [Personal Data](#personal-data)
     - [Update](#update)
-  - [Risks and assumptions](#risks-and-assumptions)
+  - [Risks And Assumptions](#risks-and-assumptions)
   - [Glossary](#glossary)
 
 </details>
@@ -53,56 +52,116 @@
 
 As a student at ALGOSUP, I have the privilege and responsibility of designing and implementing an ambitious project called "Moonshot". As part of this initiative, I have chosen to carry out a proof of concept: the development of a kernel in X86 architecture dedicated to the recycling of computers equipped with Intel processors. This initiative is part of our commitment to innovation and sustainability, aimed at extending the life of existing IT equipment.
 
-## Project scope
+## Project Scope
 
+### Overview
 The main aim of this project is to demonstrate that by developing a sufficiently light kernel, adapted to computers equipped with Intel processors dating from the early 2000s, it is possible to give a new lease of life to these technologically outdated devices. The vision is to turn them into arcade cabinets, offering an innovative alternative to obsolescence.
 
 This kernel acts as an interface for launching retro games coded in C language. Users can create their own games, adding a participatory dimension to the platform. In short, the kernel functions as a retro game launcher, offering a playful and creative experience for the user community.
 
+### Retro-Gaming and Computer Recycling Nowadays
+**Retro-Gaming**:  
+In a [study conducted by ExpressVPN](https://www.expressvpn.com/fr/blog/qui-consacre-le-plus-de-temps-aux-jeux-video-ce-nest-pas-la-generation-z/) to investigate the type of people and the amount of time they spend playing video games. We can see that out of 2000 people, 79% still play old video games.
+The interesting detail of the study is the part where they explain that of the 79% who play old video games, only 38% do so out of nostalgia.
+This means that retro-gaming is an interesting market not only for nostalgic gamers but also, as the study explains, for people of Generation Z who are attracted by old games with less elaborate graphics but varied gameplay.
+
+**Computer Recycling Nowadays**:  
+In 2023, the website [theworldcounts](https://www.theworldcounts.com/stories/electronic-waste-facts) counted over 45 million tons of electronic waste thrown away worldwide.
+
+In France, as the following [European study](https://www.europarl.europa.eu/news/en/headlines/society/20201208STO93325/e-waste-in-the-eu-facts-and-figures-infographic) shows, only 36.6% of electronic waste was recycled in 2017. Recycling is not without cost, and what's more, not every computer can be fully recycled; there's always some waste that can't be reused. This is easy to understand when you consider that a computer contains many different materials, including iron, steel alloys, and different types of plastic and glass.
+
+**Computer lifespan:**  
+To estimate the lifespan of a computer, it's necessary to understand why people change computers.
+
+On its website, [Microsoft](https://www.microsoft.com/en-us/windows/learning-center/reasons-to-get-new-computer) explains the 3 reasons to consider when deciding whether to change your computer. They recommend changing because of the computer's power, the battery, or simply because it's not too expensive. Based on these criteria, various studies and articles indicate that the average lifespan of a computer is between 3 and 5 years.  
+Data used :
+- [Texas Department of Information Resources - PC Life Cycles](https://dir.texas.gov/sites/default/files/2022-05/PC%20Life%20Cycles%20-%20Guidelines%20for%20Establishing%20Life%20Cycles.pdf)
+- [HP - What is the Average Lifespan of a Computer?](https://www.hp.com/in-en/shop/tech-takes/post/average-computer-lifespan)
+- [Satistas - Desktop PC replacement cycle length in the United States from 2022 to 2027](https://www.statista.com/statistics/267465/average-desktop-pc-lifespan/)
+
 ### Resources
 
-#### Linux kernel
-
+**Linux kernel:**  
 The use of the Linux kernel, which is free and accessible, is a valuable resource for the project. By using it as a reference, we save time by avoiding the development of already existing functionalities.
 
-#### VirtualBox
-
+**VirtualBox:**  
 VirtualBox, a virtualization software, plays an essential role. It enables us to create virtual machines to test the kernel on various computer configurations, thus ensuring a thorough evaluation of its compatibility and performance.
 
-## Personas and use cases
+## Audience
 
-### Target audience
+### Targeted Audience
 
-This kernel is aimed at a diverse audience, from retrogaming enthusiasts to DIY enthusiasts. The following personas represent our presumed target audience.
+The target audience can be very broad, but the main targets are as follows:
+- Retro game fans
+- Retro game developers
+- DIY enthusiasts
+- People who care about the environment and recycling
 
-### 1. retrogaming fan - Tony
+### Personas
 
-- Objectives:
-  - Tony, a retrogaming enthusiast, wants to play retro games on a dedicated computer without too much expense.
-  - He aspires to recapture the nostalgia of arcade cabinets by having access to several games in one place.
-- Challenges:
-  - Create an affordable computer dedicated to retrogaming, compatible with easily accessible hardware.
-  - Meet the exacting expectations of a retrogaming enthusiast like Tony.
+The following personas are designed to best represent each target audience:
+
+1. **Looking To Recycle His Old Computer - Bruce**
+   | Name | Description |
+   | ---- | ----------- |
+   | <img src="prototype_pic/personas/man-with-recycling-garbage-can-upscaled.png" alt="Guy who recycling things" width=200 /> | Bruce is 47 years old, he is a father and is very involved in the ecological cause. <br> He recycles as best he can and likes to give a second life to his old devices. <br> Bruce doesn't know anything about computers. |
+
+   | Behaviors | Needs |
+   | --------- | ----- |
+   | Bruce recently had to change his computer and he would like to give new life to his old computer that he had for 15 years. <br> He would like to transform it into a games console for himself and his children. |- A very resource-efficient system to run on an old computer. <br> - A simple system to install and maintain. |
   
-### 2. Looking to recycle his old computer - Bruce
+   Challenges:
+    - Ensure that the kernel requires few resources to run on a 15 year old computer.
+    - Simplify installation and configuration for non-specialist users like Bruce.
+  
+2. **DIY enthusiast - Clint**
+   | Name | Description |
+   | ---- | ----------- |
+   | <img src="prototype_pic/personas/guy-who-does-carpentry-upscaled2.png" alt="Guy whos does DIY" width=200/> | Clint is 25, works part-time and spends all his spare time repairing old objects or creating new ones.<br> He's quite comfortable with computers. |
 
-- Objectives:
-  - Eco-conscious Bruce wants to give his 10-year-old computer a new lease on life.
-  - Bruce knows a bit about computers, but he's not a specialist. He'd like to make the transition as simple as possible.
-- Challenges:
-  - Ensure that the kernel requires few resources to run on a 10-year-old computer.
-  - Simplify installation and configuration for non-specialist users like Bruce.
+   | Behaviors | Needs |
+   | --------- | ----- |
+   | For some time now, Clint has wanted to create his own arcade cabinet.<br> He's very good at carpentry and feels capable of doing the case, but he's never installed an operating system. | - A system adapted to old computers. <br> - A simple system to install and maintain. <br>- A system compatible with classic arcade cabinet equipment such as joysticks and buttons. |
 
-### 3. DIY enthusiast - Clint
+    Challenges:
+      - Create a simple, intuitive and well-documented installation system.
+      - Create a system compatible with joysticks and buttons.
+      - Create a system that can be easily maintained by a non-specialist like Clint.
+  
+3. **Retro-Gaming Fan - Tony**
+   | Name | Description |
+   | ---- | ----------- |
+   | <img src="prototype_pic/personas/guy-play-retro-games.png" alt="Guy playing retro video games" width=200 /> | Tony is a 19 year old student who loves retro games. Like many students, he doesn't have much money.<br>Tony knows a bit about computers, but he's not an expert. |
+   
+   | Behaviors | Needs |
+    | --------- | ----- |
+   | Tony wants to rediscover the nostalgia of his old games, but also discover new and original ones.<br> As a student, he'd like to be able to separate his work computer from the computer he plays on.  | - A computer dedicated to video games but not too expensive. <br> - To play original retro games. <br> - A system that faithfully simulates the sensations experienced with old consoles and arcade cabinets. |
+  
+    Challenges:
+      - Create an affordable computer dedicated to retrogaming, compatible with easily  accessible hardware.
+      - Meet the exacting expectations of a retrogaming enthusiast like Tony.
 
-- Objectives:
-  - Clint is a DIY enthusiast with ambitions to build his own arcade cabinet.
-  - With some computer knowledge, he wants to create and add his own retro games to the terminal.
-- Challenges:
-  - Ensure kernel compatibility with arcade joysticks and buttons for an authentic experience.
-  - Offer users the possibility of creating, adding and exchanging games via an update system, accompanied by full documentation.
+4. **Retro-Game developer - Steve**
+   | Name | Description |
+   | ---- | ----------- |
+   | <img src="prototype_pic/personas/guy-coding.png" alt="Guy coding games" width=200 /> | Steve is 35 years old and works as a network administrator in a company. <br> He lives simply and enjoys coding video games in his spare time.  | 
+   
+   | Behaviors | Needs |
+   | --------- | ----- |
+   | Steve is currently creating retro video games and would like to test them in an immersive environment. <br>Once his games are finished, Steve likes to share them for free to get feedback on his work. | - A test environment very similar to that of retro games. <br> - The ability to share games with others. |
+  
+    Challenges:
+      - Create a documentation dedicated to the creation of kernel games.
+      - Create a simple, intuitive and well-documented game import system.
+      - Give visibility to project contributors like Steve.
+      - Create an immersive, retro-gaming environment.
 
-## Functional requirements
+
+
+
+
+
+## Functional Requirements
 
 ### Architecture
 
@@ -116,7 +175,7 @@ This kernel is aimed at a diverse audience, from retrogaming enthusiasts to DIY 
 - Kernel control via keyboard.
 - Integration of kernel control with joystick and buttons, similar to an arcade cabinet.
 
-### User interface
+### User Interface
 
 - The kernel should have a simple, intuitive user interface.
 - The kernel's user interface should be visually reminiscent of an arcade cabinet.
@@ -136,32 +195,40 @@ This kernel is aimed at a diverse audience, from retrogaming enthusiasts to DIY 
 
 ### Computer
 
-For the computer, the price has been defined as follows: A search for a "desktop computer" was carried out on the second-hand website [Leboncoin]([ww](https://www.leboncoin.fr/)). Then a maximum price limit was set at 50€. Then the first 10 computers with an Intel microprocessor were selected. The average price of these 10 computers corresponds to the reference price used to define the budget.
+The budget for the computer was determined through the following steps: An investigation for a "desktop computer" was conducted on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price set at 50€. The first 10 computers featuring an Intel microprocessor were then selected. The average price of these 10 computers became the reference price used to establish the budget.
 
-So the average price of a computer used to define the budget is 30€.
-
+As a result, the average price of a computer used to calculate the budget is 30 euros. Note that the price has been rounded off, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off. 
 ### Screen
 
-For the screen, the price has been defined as follows: A search for a "screen" was carried out on the second-hand website [Leboncoin]([ww](https://www.leboncoin.fr/)). Then a maximum price limit was set at 30€. Then the first 10 screens were selected. The average price of these 10 screens corresponds to the reference price used to define the budget.
+To establish the budget for the screen, a similar approach was taken: A search for a "screen" was performed on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price limit set at 30€. The first 10 screens identified were then selected, and the average price of these screens became the reference price used in budget determination.
 
-So the average price of a screen used to define the budget is 15€.
+As a result, the average price of a screen used to define the budget is 15€. Note that the price has been rounded, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off.
 
 ### Keyboard
 
-For the keyboard, the price has been defined as follows: A search for a "keyboard" was carried out on the second-hand website [Leboncoin]([ww](https://www.leboncoin.fr/)). Then a maximum price limit was set at 20€. Then the first 10 keyboards were selected. The average price of these 10 keyboards corresponds to the reference price used to define the budget.
+The budget for the keyboard was set as follows: A search for a "keyboard" was executed on the second-hand website [Leboncoin](https://www.leboncoin.fr/), with a maximum price limit set at 20€. The first 10 keyboards meeting the criteria were selected, and the average price of these keyboards became the reference price used to define the budget.
 
-So the average price of a keyboard used to define the budget is 4€.
+Hence, the average price of a keyboard used in budget calculation is 4€. Note that the price has been rounded, as most of the time, prices on [Leboncoin](https://www.leboncoin.fr/) are rounded off.
 
-You can see more details in this [document](https://docs.google.com/spreadsheets/d/111yPxzFDjgGrgsK3DC9IpWPv7YG_TXEbQ3DORjWvqSk/edit?usp=sharing).
+For more details, please refer to this [document](https://docs.google.com/spreadsheets/d/111yPxzFDjgGrgsK3DC9IpWPv7YG_TXEbQ3DORjWvqSk/edit?usp=sharing).
 
-### Joystick and buttons
+### Joystick And Buttons
 
-Unfortunately, it's very hard to find second-hand joysticks and buttons.
-So for our project we decided to follow the [recommendations](https://www.thegeekpub.com/278188/the-best-arcade-joystick-and-buttons) of "The geek pub arcade" site and use the following pack: [link](https://www.amazon.com/dp/B01M2X88QP/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B01M2X88QP&pd_rd_w=MTBGG&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=76KQXVS8VCWWTJ7G3NVE&pd_rd_wg=opBVU&pd_rd_r=f1a9e54a-1684-43e0-b3e4-a144986e3938&s=toys-and-games&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&smid=A3H7VB6FZ4M9FM&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzMEQxREFBNDVFUjJMJmVuY3J5cHRlZElkPUEwOTYzMDA4MzdVSks2RldWNk41TSZlbmNyeXB0ZWRBZElkPUEwNDU1MzU5T1BLVjU3RkNLNE1XJndpZGdldE5hbWU9c3BfZGV0YWlsX3RoZW1hdGljJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==).
-This pack contains 1 joystick and 10 buttons with the required features for 24.24€.
+Securing second-hand joysticks and buttons proved challenging. Therefore, following the [recommendations](https://www.thegeekpub.com/278188/the-best-arcade-joystick-and-buttons) of "The geek pub arcade" site, we opted for a specific pack available at this [link](https://www.amazon.com/dp/B01M2X88QP/ref=sspa_dk_detail_3?psc=1&pd_rd_i=B01M2X88QP&pd_rd_w=MTBGG&content-id=amzn1.sym.386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_p=386c274b-4bfe-4421-9052-a1a56db557ab&pf_rd_r=76KQXVS8VCWWTJ7G3NVE&pd_rd_wg=opBVU&pd_rd_r=f1a9e54a-1684-43e0-b3e4-a144986e3938&s=toys-and-games&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&smid=A3H7VB6FZ4M9FM&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzMEQxREFBNDVFUjJMJmVuY3J5cHRlZElkPUEwOTYzMDA4MzdVSks2RldWNk41TSZlbmNyeXB0ZWRBZElkPUEwNDU1MzU5T1BLVjU3RkNLNE1XJndpZGdldE5hbWU9c3BfZGV0YWlsX3RoZW1hdGljJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==).
 
 
-## Period planning
+This pack, priced at 24.24€, includes 1 joystick and 10 buttons with the required features for our project.
+
+
+### Average Price For The Project
+As defined, the kernel and its games must be compatible with both joysticks and keyboards. This requirement enables a user to complete the project for an average of :
+- 49€ for a computer, screen and keyboard.
+- 69.24€ for a computer, screen, joystick and 10 buttons.
+  
+As expected, both prices are low enough to make the project accessible to a large number of people.
+
+
+## Period Planning
 
 This section presents the planning of the main periods of the project, from the research phase to the final presentation of the project.
 
@@ -197,7 +264,7 @@ This section presents the planning of the main periods of the project, from the 
 - It must be possible to install the kernel from a USB key.
 - The installation process should be straightforward, require a measured execution time, and be accompanied by full documentation.
 
-### Control and user interface
+### Control And User Interface
 
 - The kernel must offer a fluid control experience through the use of a keyboard.
 - An alternative is provided for control using a joystick and buttons, emulating the characteristic interaction of an arcade cabinet.
@@ -219,7 +286,7 @@ This section presents the planning of the main periods of the project, from the 
 
 - The kernel must be able to launch retro C-coded games in accordance with the documentation provided.
 
-## Non-functional criteria
+## Non-Functional Criteria
 
 - The kernel's resource consumption must not exceed 80% of the resources available on a computer equipped with an Intel Pentium 3 Katmai processor and 512 MB of in-game RAM, to prevent premature wear and tear on the computer.
 - Kernel startup time should be less than 2 minutes to ensure a responsive user experience from launch.
@@ -227,7 +294,7 @@ This section presents the planning of the main periods of the project, from the 
 - The kernel update process should be completed in less than 15 minutes, ensuring efficient system maintenance.
 - Kernel installation time should not exceed 15 minutes to ensure a fast and efficient user experience.
 
-## Out of scope
+## Out Of Scope
 
 - Installation of the kernel on a hard disk of less than 10 GB is not supported, to guarantee the minimum space required for games and prevent any future limitation of available space.
 - Installing the kernel on a computer equipped with an AMD processor is not an option for this project. The kernel, developed in X86 assembler, cannot be adapted for compatibility with AMD processors due to time constraints.
@@ -247,7 +314,7 @@ This section presents the planning of the main periods of the project, from the 
 - No kernel updates can be performed remotely, minimizing the potential risks associated with remote intrusions. Users will be notified transparently, and official announcements will be available at the designated update location.
 
 
-## Risks and assumptions
+## Risks And Assumptions
 
 | Risk | Impact | Probability | Preventive Measures | Action Plan |
 | ---- | ------ | ----------- | ------------------- | ----------- |
