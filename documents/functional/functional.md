@@ -64,7 +64,7 @@ The interesting detail of the study is the part where they explain that of the 7
 This means that retro-gaming is an interesting market not only for nostalgic gamers but also, as the study explains, for people of Generation Z who are attracted by old games with less elaborate graphics but varied gameplay.
 
 **Computer Recycling Nowadays**:  
-In 2023, the website [theworldcounts](https://www.theworldcounts.com/stories/electronic-waste-facts) counted over 45 million tons of electronic waste thrown away worldwide.
+In 2023, the website [The World Count](https://www.theworldcounts.com/stories/electronic-waste-facts) counted over 45 million tons of electronic waste thrown away worldwide.
 
 In France, as the following [European study](https://www.europarl.europa.eu/news/en/headlines/society/20201208STO93325/e-waste-in-the-eu-facts-and-figures-infographic) shows, only 36.6% of electronic waste was recycled in 2017. Recycling is not without cost, and what's more, not every computer can be fully recycled; there's always some waste that can't be reused. This is easy to understand when you consider that a computer contains many different materials, including iron, steel alloys, and different types of plastic and glass.
 
@@ -183,7 +183,7 @@ Below is a diagram of the interface:
 The movement of the games when the user clicks on one of the right or left arrows can be schematized as follows:
 | Schema | Description |
 | ------ | ----------- |
-| <img src="prototype_pic/UX/moonshot_UX2.svg" alt="Draft of the main interface game movements" width="400" /> | When the user clicks on the red arrow (5 in the previous diagram),<br> the position of the games shifts by 1 to the right so game 1 is displayed.<br> In the same way, if the user clicks on the green arrow (6 in the previous diagram),<br> the position of the games shifts by 1 to the left so game 8 is displayed. |
+| <img src="prototype_pic/UX/moonshot_UX2.svg" alt="Draft of the main interface game movements" width="400" /> | When the user clicks on the red arrow (5 in the previous schema),<br> the position of the games shifts by 1 to the right so game 1 is displayed.<br> In the same way, if the user clicks on the green arrow (6 in the previous schema),<br> the position of the games shifts by 1 to the left so game 8 is displayed. |
 
 Navigating from one game to another is done either using the keyboard arrows or the "enter" key or with the joystick and buttons.  
 The different user inputs and the resulting actions are detailed in the following table:
@@ -354,17 +354,25 @@ This section presents the planning of the main periods of the project, from the 
 | Bug | A bug is a defect or error in a computer program that causes undesired behavior. | [Link](https://en.wikipedia.org/wiki/Software_bug) |
 | C language | The C language is a high-level programming language that has been widely used in software development. It is known for its flexibility and proximity to machine language. | [Link](https://en.wikipedia.org/wiki/C_(programming_language)) |
 | DIY | Do It Yourself refers to the practice of creating, making or repairing something yourself, rather than buying ready-made products. | [Link](https://en.wikipedia.org/wiki/Do_it_yourself) |
+| ExpressVPN | ExpressVPN is a virtual private network service offered by the British Virgin Islands-based company Express VPN International Ltd. | [Link](https://en.wikipedia.org/wiki/ExpressVPN) |
 | GB | "GB" is the abbreviation for gigabyte, a unit of measurement for storage capacity or memory, equivalent to 1,024 megabytes. | [Link](https://en.wikipedia.org/wiki/Gigabyte) |
+| Generation Z | Generation Z is the generation of people born between 1997 and 2012. | [Link](https://en.wikipedia.org/wiki/Generation_Z) |
 | Graphics card | A graphics card is a computer component that manages the display of images on the screen. It is essential for graphics quality and game performance. | [Link](https://en.wikipedia.org/wiki/Graphics_card) |
 | HDD | A hard disk is a magnetic data storage device used in computers to store files, programs and the operating system. | [Link](https://en.wikipedia.org/wiki/Hard_disk_drive) |
+| HP | HP (Hewlett-Packard) is an American company specializing in the manufacture of computers and printers. | [Link](https://en.wikipedia.org/wiki/Hewlett-Packard) |
 | Intel | Intel is an American company specializing in the manufacture of processors and electronic components. It is best known for its processors, which are used in many computers. | [Link](https://en.wikipedia.org/wiki/Intel) |
 | Joysticks | Joysticks are video game control devices that allow users to move a cursor or character on the screen by pushing it in different directions. | [Link](https://en.wikipedia.org/wiki/Joystick) |
 | Kernel | The kernel is the central part of an operating system. It manages hardware resources and memory, and facilitates interaction between hardware and software. | [Link](https://en.wikipedia.org/wiki/Kernel_(operating_system)) |
+| Leboncoin | Leboncoin is a French website for classified ads. It is the most visited website in France. | [Link](https://en.wikipedia.org/wiki/Leboncoin) |
 | Linux | Linux is an open source operating system based on the Linux kernel. It is widely used in the computing world, offering a free and flexible alternative to other operating systems. | [Link](https://en.wikipedia.org/wiki/Linux) |
 | MB | MB is the abbreviation for megabyte, a unit of measurement of storage capacity or memory, equivalent to 1,024 kilobytes. | [Link](https://en.wikipedia.org/wiki/Megabyte) |
+| Microsoft | Microsoft is an American company specializing in the manufacture of software and electronic components. It is best known for its Windows operating system, which is used in many computers. | [Link](https://en.wikipedia.org/wiki/Microsoft) |
 | Pentium 3 Katmai | The Pentium 3 Katmai is a specific version of the Pentium 3 processor manufactured by Intel, popular in the late 1990s. | [Link](https://en.wikipedia.org/wiki/Pentium_III) |
 | RAM | RAM (Random Access Memory) is a volatile memory used by a computer to temporarily store data and running programs. It allows rapid access to information by the processor. | [Link](https://en.wikipedia.org/wiki/Random-access_memory) |
 | Retrogaming | Retrogaming refers to the practice of playing classic video games, often from older consoles, to relive gaming experiences of the past. | [Link](https://en.wikipedia.org/wiki/Retrogaming) |
+| Satistas | Statista is a German company specializing in market and consumer data. | [Link](https://en.wikipedia.org/wiki/Statista) |
+| The geek pub arcade | The geek pub arcade is a website dedicated to the creation of arcade cabinets. | [Link](https://www.thegeekpub.com/) |
+| The World Counts | The World Counts is a website that provides statistics on the environment and the impact of human activity on the planet. | [Link](https://www.theworldcounts.com/) |
 | USB flash drive | A USB flash drive is a small portable storage device that uses flash memory to store data. It is often used to transfer files between computers. | [Link](https://en.wikipedia.org/wiki/USB_flash_drive) |
 | VirtualBox | VirtualBox is an open-source virtualization software program that lets you create virtual machines on a host system, allowing multiple operating systems to run simultaneously. | [Link](https://en.wikipedia.org/wiki/VirtualBox) |
 | Virtualization | Virtualization is a technology that enables the creation of virtual versions of a computing environment, such as virtual machines, allowing multiple operating systems to run on a single physical machine. | [Link](https://en.wikipedia.org/wiki/Virtualization) |
