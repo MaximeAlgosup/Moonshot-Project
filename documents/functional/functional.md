@@ -4,7 +4,7 @@
 | Document name | Functional specifications |
 | Document owner | Maxime CARON |
 | Creation date | October 30, 2023 |
-| Last update | November 26, 2023 |
+| Last update | November 28, 2023 |
 
 
 <details>
@@ -33,7 +33,7 @@
   - [Success Criteria](#success-criteria)
     - [Hardware](#hardware)
     - [Installation](#installation-1)
-    - [User Experince And Interface](#user-experince-and-interface)
+    - [User Experience And Interface](#user-experience-and-interface)
     - [Bugs](#bugs)
     - [Game Launcher](#game-launcher)
   - [Non-Functional Criteria](#non-functional-criteria)
@@ -286,7 +286,7 @@ This section presents the planning of the main periods of the project, from the 
 - It must be possible to install the kernel from a USB key.
 - The installation process should be straightforward, require a measured execution time, and be accompanied by full documentation.
 
-### User Experince And Interface
+### User Experience And Interface
 
 - The kernel must offer a fluid control experience through the use of a keyboard.
 - An alternative is provided for control using a joystick and buttons, emulating the characteristic interaction of an arcade cabinet.
