@@ -25,6 +25,7 @@
     - [User Interface](#user-interface)
     - [Installation](#installation)
     - [Update System](#update-system)
+    - [Game Creation](#game-creation)
   - [Budget](#budget)
     - [Budget Constraints](#budget-constraints)
     - [Analysis of the French Second-Hand Market](#analysis-of-the-french-second-hand-market)
@@ -178,7 +179,7 @@ Below is a diagram of the interface:
 
 | Schema | Description |
 | ------ | ----------- |
-| <img src="prototype_pic/UX/moonshot_UX.svg" alt="Draft of the main interface" width="400" /> | 1. Picture of the game <br> 2. Game name <br> 3. Game description <br> 4. Button to launch the game <br> 5. Button to access the game settings <br> 6. Buttons to shift and even play on the left <br> 7. Buttons to shift and even play on the right <br> 8. Button to access the kernel settings |
+| <img src="prototype_pic/UX/moonshot_UX.svg" alt="Draft of the main interface" width="400" /> | 1. Picture of the game <br> 2. Game name <br> 3. Button to launch the game <br> 4. Button to access the game settings <br> 5. Buttons to shift and even play on the left <br> 6. Buttons to shift and even play on the right <br> 7. Button to access the kernel settings |
 
 The movement of the games when the user clicks on one of the right or left arrows can be schematized as follows:
 | Schema | Description |
@@ -198,7 +199,7 @@ The different user inputs and the resulting actions are detailed in the followin
 | Button 1 to 6 | Validate the selection. |
 
 ### User Interface
-The design of the main interface is initially simple and refined because it is not one of the major issues.
+The design of the main interface is initially simple because it is not one of the major issues.
 The main interface is designed to be simple and intuitive, it is not intended to be a work of art but rather a functional interface.  
 The kernel interface should look like this:
 
@@ -207,13 +208,44 @@ The kernel interface should look like this:
 ### Installation
 
 - Possibility of installing the kernel on a hard disk.
-- Alternative kernel installation via USB key.
+- Possibility of choosing the installation location.
+- Kernel installation done via USB key or CD-ROM.
 - Simplification and documentation of the entire kernel installation process.
 
 ### Update System
 
-- Kernel update possible via USB key.
-- Clear documentation and simplicity of the kernel update procedure.
+The update system must not only install a new kernel version, but also allow the user to install games.
+
+**Kernel update:**  
+
+The steps involved in updating the kernel should be straightforward, to enable a user unfamiliar with the world of computing to carry out an update.
+The steps involved in an update are as follows:
+- Download the update file on the official project GitHub.
+- Put the file on a USB key and insert USB key into computer.
+- From the main kernel interface, go to setting.
+- Select "Update system".
+
+**Game installation:**  
+
+Installing games is very similar to updating the system.
+The steps involved in installing a game are as follows:
+- Download the game file on the official project GitHub.
+- Put the file on a USB key and insert USB key into computer.
+- From the main kernel interface, go to setting.
+- Select "Update system".
+
+### Game Creation
+Game creation must be accessible to as many users as possible, but using a language that is sufficiently low-level to meet the limitations imposed by the hardware.
+The tools given to users for this task are as follows:
+- A C library with documentation explaining how to use it.
+- Documentation explaining how to create a game with step-by-step instructions.
+- Full, detailed documentation of kernel operation.
+- A virtual machine configuration to emulate a kernel.
+
+The game creations have the following requirements:
+- The game must be created in C following the C99 standard.
+- The code must only run on 32 bits and a single thread.
+-  The game must require less than 512 MB of RAM.
 
 ## Budget
 
@@ -309,7 +341,7 @@ This section presents the planning of the main periods of the project, from the 
 
 - The kernel's resource consumption must not exceed 80% of the resources available on a computer equipped with an Intel Pentium 3 Katmai processor and 512 MB of in-game RAM, to prevent premature wear and tear on the computer.
 - Kernel startup time should be less than 2 minutes to ensure a responsive user experience from launch.
-- The kernel's response time, when executing common tasks, must be kept below 1 second to guarantee a fluid experience.
+- The kernel's response time, when executing common tasks, must be kept below 200 milliseconds to guarantee a fluid experience.
 - The kernel update process should be completed in less than 15 minutes, ensuring efficient system maintenance.
 - Kernel installation time should not exceed 15 minutes to ensure a fast and efficient user experience.
 
@@ -348,7 +380,9 @@ This section presents the planning of the main periods of the project, from the 
 | AMD  | AMD (Advanced Micro Devices) is an American company specializing in the manufacture of processors, graphics cards and other computer components. | [Link](https://en.wikipedia.org/wiki/AMD) |
 | Arcade cabinet | An arcade cabinet is a public video game device, often equipped with a screen, buttons and a joystick, enabling players to play arcade games. | [Link](https://en.wikipedia.org/wiki/Arcade_cabinet) |
 | Bug | A bug is a defect or error in a computer program that causes undesired behavior. | [Link](https://en.wikipedia.org/wiki/Software_bug) |
+| C99 | C99 is a version of the C language standardized by the ISO in 1999. | [Link](https://en.wikipedia.org/wiki/C99) |
 | C language | The C language is a high-level programming language that has been widely used in software development. It is known for its flexibility and proximity to machine language. | [Link](https://en.wikipedia.org/wiki/C_(programming_language)) |
+| C library | A C library is a set of functions and constants that can be used in C programs. | [Link](https://en.wikipedia.org/wiki/C_standard_library) |
 | DIY | Do It Yourself refers to the practice of creating, making or repairing something yourself, rather than buying ready-made products. | [Link](https://en.wikipedia.org/wiki/Do_it_yourself) |
 | ExpressVPN | ExpressVPN is a virtual private network service offered by the British Virgin Islands-based company Express VPN International Ltd. | [Link](https://en.wikipedia.org/wiki/ExpressVPN) |
 | GB | "GB" is the abbreviation for gigabyte, a unit of measurement for storage capacity or memory, equivalent to 1,024 megabytes. | [Link](https://en.wikipedia.org/wiki/Gigabyte) |
@@ -369,6 +403,7 @@ This section presents the planning of the main periods of the project, from the 
 | Satistas | Statista is a German company specializing in market and consumer data. | [Link](https://en.wikipedia.org/wiki/Statista) |
 | The geek pub arcade | The geek pub arcade is a website dedicated to the creation of arcade cabinets. | [Link](https://www.thegeekpub.com/) |
 | The World Counts | The World Counts is a website that provides statistics on the environment and the impact of human activity on the planet. | [Link](https://www.theworldcounts.com/) |
+| Tread | A thread is a sequence of instructions executed by a processor. A processor can execute several threads simultaneously, allowing several programs to run at the same time. | [Link](https://en.wikipedia.org/wiki/Thread_(computing)) |
 | USB flash drive | A USB flash drive is a small portable storage device that uses flash memory to store data. It is often used to transfer files between computers. | [Link](https://en.wikipedia.org/wiki/USB_flash_drive) |
 | VirtualBox | VirtualBox is an open-source virtualization software program that lets you create virtual machines on a host system, allowing multiple operating systems to run simultaneously. | [Link](https://en.wikipedia.org/wiki/VirtualBox) |
 | Virtualization | Virtualization is a technology that enables the creation of virtual versions of a computing environment, such as virtual machines, allowing multiple operating systems to run on a single physical machine. | [Link](https://en.wikipedia.org/wiki/Virtualization) |
